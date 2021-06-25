@@ -19,7 +19,6 @@ const errorExchange: Exchange =
     return pipe(
       forward(ops$),
       tap(({ error }) => {
-        console.log(error)
         if (error?.message.includes('Unauthorized')) {
           Router.replace('/login')
         }

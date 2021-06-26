@@ -16,6 +16,7 @@ export const Wrapper = ({ children, variant = 'regular' }: WrapperProps) => {
         w: '100%',
         mt: 8,
         mx: 'auto',
+        pb: 16,
       }}
     >
       {children}

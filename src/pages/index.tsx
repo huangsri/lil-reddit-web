@@ -10,7 +10,7 @@ import { Layout } from '../components'
 
 const Index = () => {
   const [variables, setVariables] = useState({
-    limit: 10,
+    limit: 15,
     cursor: null as null | string,
   })
   const [{ data, fetching }] = usePostsQuery({
@@ -41,6 +41,7 @@ const Index = () => {
                   <Heading sx={{ fontSize: 'xl' }}>
                     {idx + 1}. {p.title}
                   </Heading>
+                  <Text>posted by: {p.creator.username}</Text>
                   <Text sx={{ mt: 4 }}>{p.textSnippet}</Text>
                 </Box>
               ))}
